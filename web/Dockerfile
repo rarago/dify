@@ -7,6 +7,9 @@ LABEL maintainer="takatost@gmail.com"
 
 RUN apk add --no-cache tzdata
 RUN npm install -g pnpm@9.12.2
+RUN pnpm config set registry https://registry.npmmirror.com
+
+
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
